@@ -1,0 +1,61 @@
+This README file contains information on the contents of the
+te0803 layer.
+
+Please see the corresponding sections below for details.
+
+
+Dependencies
+============
+
+This layer depends on:
+
+  URI: git://git.openembedded.org/bitbake
+  branch: master
+
+  URI: git://git.openembedded.org/openembedded-core
+  layers: meta
+  branch: master
+
+  URI: https://github.com/Xilinx/meta-xilinx
+  layers: meta-xilinx
+  branch: X
+
+Patches
+=======
+
+Maintainer: Jorge Lamperez <jlamperez10@gmail.com>
+
+
+Table of Contents
+=================
+
+  I. Adding the te0803 layer to your build
+ II. Misc
+
+
+I. Adding the te0803 layer to your build
+=================================================
+
+--- replace with specific instructions for the te0803 layer ---
+
+In order to use this layer, you need to make the build system aware of
+it.
+
+Assuming the te0803 layer exists at the top-level of your
+yocto build tree, you can add it to the build system by adding the
+location of the te0803 layer to bblayers.conf, along with any
+other layers needed. e.g.:
+
+  BBLAYERS ?= " \
+    /path/to/yocto/meta \
+    /path/to/yocto/meta-poky \
+    /path/to/yocto/meta-yocto-bsp \
+    /path/to/poky/meta-xilinx \
+    /path/to/yocto/meta-te0803 \
+    "
+
+
+II. Misc
+========
+
+--- replace with specific information about the te0803 layer ---
