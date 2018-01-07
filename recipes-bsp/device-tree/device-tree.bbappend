@@ -22,20 +22,16 @@
 #	-data ${data} -sw ${DEVICETREE_WORKDIR} -o ${DEVICETREE_WORKDIR} -a "soc_mapping"
 #}
 
+
+
 FILESEXTRAPATHS_prepend_te0803-3eg-tebf0808-zynqmp := "${THISDIR}/files/te0803-3eg-tebf0808-zynqmp:"
 
-SRC_URI_prepend_te0803-3eg-tebf0808-zynqmp += "file://pcw.dtsi"
-SRC_URI_prepend_te0803-3eg-tebf0808-zynqmp += "file://pl.dtsi"
-SRC_URI_prepend_te0803-3eg-tebf0808-zynqmp += "file://te0803-3eg-tebf0808.dts"
-SRC_URI_prepend_te0803-3eg-tebf0808-zynqmp += "file://zynqmp-clk-ccf.dtsi"
-SRC_URI_prepend_te0803-3eg-tebf0808-zynqmp += "file://zynqmp-clk.dtsi"
-SRC_URI_prepend_te0803-3eg-tebf0808-zynqmp += "file://zynqmp.dtsi"
-
-MACHINE_DEVICETREE_prepend_te0803-3eg-tebf0808-zynqmp = " \
-                zynqmp.dtsi \
-                te0803-3eg-tebf0808y.dts \
-                pl.dtsi \
-                pcw.dtsi \
-                zynqmp-clk-ccf.dtsi \
-                zynqmp-clk.dtsi \
-                "
+COMPATIBLE_MACHINE_te0803-3eg-tebf0808-zynqmp = ".*"
+SRC_URI_append_te0803-3eg-tebf0808-zynqmp += " \
+                               file://pcw.dtsi \
+                               file://pl.dtsi \
+                               file://te0803-3eg-tebf0808-zynqmp.dts \
+                               file://zynqmp-clk-ccf.dtsi \
+                               file://zynqmp-clk.dtsi \
+                               file://zynqmp.dtsi \
+                               "

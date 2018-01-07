@@ -16,14 +16,12 @@ IMAGE_LINGUAS = " "
 IMAGE_INSTALL = "\
 		kernel-modules \
 		busybox \
-		busybox-httpd \
 		e2fsprogs \
 		e2fsprogs-mke2fs \
 		e2fsprogs-e2fsck \
 		i2c-tools \
 		mtd-utils \
 		usbutils \
-		canutils \
 		openssh-sftp-server \
 		alsa-tools \
 		alsa-utils \
@@ -41,13 +39,8 @@ IMAGE_INSTALL = "\
 		packagegroup-core-ssh-dropbear \
 		tcf-agent \
 		alsa-plugins \
-		bridge-utils \
 		adau1761init \
 		startup \
-                peekpoke \
-                gpio-demo \
-                adau1761-i2c \
-                devmem2 \
-		"
+"
 
 EXTRA_USERS_PARAMS = "usermod -P root root;"
