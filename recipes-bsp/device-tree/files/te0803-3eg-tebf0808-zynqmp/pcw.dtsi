@@ -129,6 +129,7 @@
 };
 &dwc3_0 {
 	status = "okay";
+        dr_mode = "host";
 };
 &pss_ref_clk {
 	clock-frequency = <33333329>;
