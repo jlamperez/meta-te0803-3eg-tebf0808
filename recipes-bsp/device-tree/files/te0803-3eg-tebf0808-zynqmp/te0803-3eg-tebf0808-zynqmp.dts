@@ -5,7 +5,9 @@
 /include/ "pcw.dtsi"
 / {
 	chosen {
-		bootargs = "console=ttyPS0,115200 earlyprintk";
+		/*bootargs = "console=ttyPS0,115200 earlyprintk";*/
+		bootargs = "earlycon clk_ignore_unused";
+		stdout-path = "serial0:115200n8";
 	};
 	aliases {
 		ethernet0 = &gem3;
@@ -18,6 +20,13 @@
 	};
 	cpus {
 	};
+};
+
+/* SD */
+&sdhci1 {
+        // disable-wp;
+        no-1-8-v;
+
 };
 
 /* ETH PHY */
@@ -36,7 +45,7 @@
     #size-cells = <0>;
     status = "okay";
     flash0: flash@0 {
-	    //compatible = "n25q512a","micron,m25p80";
+	    compatible = "n25q512a","micron,m25p80";
 	    spi-tx-bus-width=<1>;
 	    spi-rx-bus-width=<4>;
 	    reg = <0x0>;
