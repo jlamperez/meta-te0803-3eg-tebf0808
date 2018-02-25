@@ -9,12 +9,14 @@ Dependencies
 
 This layer depends on:
 
+```
   URI: git://git.yoctoproject.org/poky.git
   branch: rocko
 
   URI: https://github.com/Xilinx/meta-xilinx.git
   layers: meta-xilinx-bsp
   branch: rocko
+```
 
 Patches
 =======
@@ -40,6 +42,7 @@ yocto build tree, you can add it to the build system by adding the
 location of the te0803-3eg-tebf0808 layer to bblayers.conf, along with any
 other layers needed. e.g.:
 
+```
   BBLAYERS ?= " \
     /path/to/yocto/meta \
     /path/to/yocto/meta-poky \
@@ -47,25 +50,34 @@ other layers needed. e.g.:
     /path/to/poky/meta-xilinx/meta-xilinx-bsp \
     /path/to/yocto/te0803-3eg-tebf0808 \
     "
-
+```
 
 II. Misc
 ========
 
+```
 MACHINE ??="te0803-3eg-tebf0808-zynqmp"
+```
 
+```
 #
 # Parallel thread execution
 #
 CONFIG_YOCTO_BB_NUMBER_THREADS="8"
 CONFIG_YOCTO_PARALLEL_MAKE="-j 8"
+```
 
 Launch
 =========
+
+```
 bitbake core-image-tebf0808
+```
 or
+```
 bitbake core-image-minimal
+```
 
 More Info
 =========
-See the [wiki](https://github.com/jlamperez/meta-te0803-3eg-tebf0808/wiki)
+See the [Wiki](https://github.com/jlamperez/meta-te0803-3eg-tebf0808/wiki)
