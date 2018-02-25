@@ -63,3 +63,9 @@ CONFIG_YOCTO_PARALLEL_MAKE="-j 8"
 Launch
 =========
 bitbake core-image-tebf0808
+or
+bitbake core-image-minimal
+
+More Info
+=========
+See the [wiki](https://github.com/jlamperez/meta-te0803-3eg-tebf0808/wiki)
