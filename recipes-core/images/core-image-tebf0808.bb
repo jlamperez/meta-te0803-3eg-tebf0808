@@ -41,6 +41,9 @@ IMAGE_INSTALL = "\
 		alsa-plugins \
 		adau1761init \
 		startup \
+                devmem2 \
+                libstdc++-dev \
+                libstdc++ \
 "
 
 EXTRA_USERS_PARAMS = "usermod -P root root;"
