@@ -50,6 +50,3 @@ IMAGE_INSTALL = "\
 "
 
 EXTRA_USERS_PARAMS = "usermod -P root root;"
-
-SOURCE_MIRROR_URL ?= "file://~/Escritorio/mali"
-INHERIT += "own-mirrors"
