@@ -11,6 +11,7 @@
 	};
 	aliases {
 		ethernet0 = &gem3;
+                i2c0 = &i2c0;
 		serial0 = &uart0;
 		spi0 = &qspi;
 	};
@@ -20,6 +21,10 @@
 	};
 	cpus {
 	};
+        xlnk {
+                compatible = "xlnx,xlnk-1.0";
+        };
+
 };
 
 /* SD */
@@ -27,6 +32,13 @@
         // disable-wp;
         no-1-8-v;
 
+};
+
+/* USB  */
+
+&dwc3_0 {
+    status = "okay";
+    dr_mode = "host";
 };
 
 /* ETH PHY */
@@ -45,7 +57,7 @@
     #size-cells = <0>;
     status = "okay";
     flash0: flash@0 {
-	    compatible = "n25q512a","micron,m25p80";
+	    compatible = "n25q512a","micron,m25p80","jedec,spi-nor";
 	    spi-tx-bus-width=<1>;
 	    spi-rx-bus-width=<4>;
 	    reg = <0x0>;

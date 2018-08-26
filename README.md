@@ -11,11 +11,11 @@ This layer depends on:
 
 ```
   URI: git://git.yoctoproject.org/poky.git
-  branch: rocko
+  branch: sumo
 
   URI: https://github.com/Xilinx/meta-xilinx.git
   layers: meta-xilinx-bsp
-  branch: rocko
+  branch: sumo
 ```
 
 Patches
