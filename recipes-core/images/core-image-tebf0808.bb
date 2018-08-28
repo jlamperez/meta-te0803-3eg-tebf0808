@@ -41,7 +41,6 @@ IMAGE_INSTALL = "\
 		alsa-plugins \
 		adau1761init \
 		startup \
-                devmem2 \
                 libstdc++-dev \
                 libstdc++ \
 "

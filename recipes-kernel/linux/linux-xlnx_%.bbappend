@@ -1,5 +1,5 @@
 
-RDEPENDS_kernel-base = ""
+RDEPENDS_${KERNEL_PACKAGE_NAME}-image = ""
 KERNEL_IMAGETYPE_zynq ?= "zImage"
 do_configure[depends] += "kern-tools-native:do_populate_sysroot"
 SRC_URI += "file://tebf0808_kernel.cfg \
